@@ -202,8 +202,8 @@
 
 |展示图|
 |---
-|![image](https://git.weixin.qq.com/wx_wx3b328666f611d3d7/OutInquiry/raw/77cf487543228f77013fe0959b8ab245b2b1f1ea/static/1_realTimeOutbreaks.gif)
-|![image](https://git.weixin.qq.com/wx_wx3b328666f611d3d7/OutInquiry/raw/77cf487543228f77013fe0959b8ab245b2b1f1ea/static/2_outbreakProtection.gif)
+|![image](https://github.com/HilaryHA/OutInquiry/blob/master/static/1_realTimeOutbreaks.gif)
+|![image](https://github.com/HilaryHA/OutInquiry/blob/master/static/2_outbreakProtection.gif)
 
 
 
