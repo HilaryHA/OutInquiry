@@ -1,0 +1,66 @@
+.oi_self {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #FFF;
+}
+.oi_self .sp_it {
+  background: #FFF;
+  height: 99%;
+  border-radius: 10rpx;
+  margin: 0 16rpx;
+  border: 1rpx solid #d8d8d8;
+  padding-left: 80rpx;
+}
+.sp_it .van-button--mini {
+  width: 130rpx;
+  margin: 42rpx 0 30rpx;
+}
+.sp_it .it_img {
+  height: 430rpx;
+  width: 430rpx;
+  position: relative;
+  display: block;
+}
+.it_img image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12rpx;
+}
+.sp_it text {
+  color: #969799;
+  font-size: 22rpx;
+  display: block;
+  line-height: 82rpx;
+  height: auto;
+}
+.oi_self swiper {
+  height: 100%;
+}
+.oi_self .van-cell::after {
+  border-bottom: 0px;
+}
+.oi_self van-icon,.van-icon::before {
+  color: #005dff;
+  font-weight: 500;
+}
+.oi_self .van-cell__title,
+.oi_self .van-cell__value {
+  color: #005dff;
+  font-weight: 680;
+}
+.oi_self .van-cell__label {
+  font-weight: normal;
+  width: 420rpx;
+}
+.protect_swiper,
+.ingy_swiper,
+.safety_swiper {
+  height: 680rpx;
+  width: 100%;
+  margin-bottom: 50rpx;
+  background: #fcfcfc;
+  margin-top: 20rpx;
+}

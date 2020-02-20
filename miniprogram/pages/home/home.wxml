@@ -1,0 +1,115 @@
+<!--miniprogram/pages/echart/echart.wxml-->
+<view class="show_ech">
+  <!-- 错误提示框，此占位符必须存在 -->
+  <van-toast id="van-toast" />
+  <view class="top_info">
+    <van-image
+      width="100%"
+      height="260rpx"
+      fit="cover"
+      src="/images/banner.jpg"
+      class="head_img"
+    />
+    <view class="top_txt">
+      <view class="init_info">
+        <span class="info_line">|</span>
+        <span class="info_ri">
+          <div class="ri_top">新型冠状病毒肺炎</div>
+          <div class="ri_bot"><i>疫情实时追踪</i></div>
+        </span>
+      </view>
+      <view class="init_bot">数据来源: 国家及各地卫健委每日信息发布</view>
+    </view>
+  </view>
+  <view class="all_tip">
+    <span class="all_tip_ini">
+      统计截至 <span class="all_bold">{{ allList.date }}</span> 更新于 <span class="all_bold">{{ updateMinutes }}分钟</span> 前
+    </span>
+  </view>
+  <view class="tip_dia">
+    <view class="tip_box dia">
+      <p class="add_last" wx:if="{{ allList.diagnosedIncr }}">
+        较上日<span>+{{ allList.diagnosedIncr }} </span>
+      </p>
+      <p class="num">{{ allList.diagnosed }}</p>
+      <p class="txt">全国确诊</p>
+    </view>
+    <view class="tip_box sus">
+      <p class="add_last" wx:if="{{ allList.diagnosedIncr }}">  
+        较上日<span>+{{ allList.suspectIncr }} </span>
+      </p>
+      <p class="num">{{ allList.suspect }}</p>
+      <p class="txt">疑似病例</p>
+    </view>
+    <view class="tip_box cur">
+      <p class="add_last" wx:if="{{ allList.diagnosedIncr }}">
+        较上日<span>+{{ allList.suspectIncr }} </span>
+      </p>
+      <p class="num">{{ allList.cured }}</p>
+      <p class="txt">治愈人数</p>
+    </view>
+    <view class="tip_box death">
+      <p class="add_last" wx:if="{{ allList.diagnosedIncr }}">
+        较上日<span>+{{ allList.deathIncr }} </span>
+      </p>
+      <p class="num">{{ allList.death }}</p>
+      <p class="txt">死亡人数</p>
+    </view>
+  </view>
+  <view class="chart_all">
+    <ec-canvas id="mychart-dom-map" canvas-id="mychart-map" ec="{{ ecMap }}"></ec-canvas>
+  </view> 
+  <view class="van_line">
+   <view class="protect_swiper">
+        <swiper indicator-dots="{{ indicatorDots }}" autoplay="{{ autoplay }}" duration="{{ duration }}" indicator-color="{{ indicatorColor }}" indicator-active-color="{{ indicatorActiveColor }}" circular="{{ circular }}" easing-function="{{ easingFunction }}" vertical="{{ vertical }}" bindchange="swiperChange">
+        <!-- wx:key="*this" 代表在for循环中的item自身，这种表示需要item本身就是一个唯一的字符串或者数字 -->
+          <block wx:for="{{lineList}}" wx:key="id">
+            <swiper-item class="swiper-item">
+              <view class="chart_all">
+                <ec-canvas  id="{{ item.id }}" canvas-id="{{ item.canvasId }}" ec="{{ item.ec }}"></ec-canvas>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+
+
+    <!-- <view class="chart_all">      
+      <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}" wx:if="{{tabIndex == 0}}"></ec-canvas>       -->
+      <!-- 以下是对一个自定义组件的引用 -->
+      <!-- <view>
+        <component-tag-name></component-tag-name>
+      </view> -->
+      <!-- <ec-canvas id="mychart-dom-bar-two" canvas-id="mychart-bar-two" ec="{{ ecTwo }}" wx:if="{{tabIndex == 1}}"></ec-canvas>
+    </view>   -->
+  </view>
+  <view class="pro_col">
+    <text class="col_title">中国疫情</text>
+    <view class="col_tip">
+      <text class="tip_area init_ar">地区</text>
+      <p class="tip_rig init_rig">
+        <span>累计确诊</span>
+        <span>治愈</span>
+        <span>死亡</span>
+      </p>
+    </view>
+    <van-collapse value="{{ activeNames }}" bind:change="collChange">
+      <van-collapse-item name="{{item.locationId}}" wx:for="{{ allList.area }}" wx:key="provinceName">
+        <view slot="title" class="item_ar">{{item.provinceName}}</view>
+        <view slot="value" class="item_rig">
+          <span>{{item.confirmedCount}}</span>
+          <span>{{item.curedCount}}</span>
+          <span>{{item.deadCount}}</span>
+        </view>
+        <view wx:for="{{item.cities}}" wx:for-item="childItem" wx:key="cityName" class="col_tip child_txt">
+          <view class="init_ar">{{ childItem.cityName }}</view>
+          <view class="init_rig">
+            <span>{{ childItem.confirmedCount }}</span>
+            <span>{{ childItem.curedCount }}</span>
+            <span>{{ childItem.deadCount }}</span>
+          </view>
+        </view>
+      </van-collapse-item>
+    </van-collapse>
+  </view>
+</view>

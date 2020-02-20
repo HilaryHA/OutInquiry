@@ -1,0 +1,281 @@
+.show_ech {
+  box-sizing: border-box;
+  background: #FFF;
+  width: 100%;
+}
+/* 顶部信息 */
+.top_info {
+  width: 100%;
+  height: 260rpx;
+  margin-bottom: 0;
+}
+.top_info .head_img {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.top_info .top_txt {
+  position: absolute;
+  top: 20rpx;
+  bottom: 20rpx;
+  left: 20rpx;
+  z-index: 1;
+  color: #fff;
+}
+.top_txt .init_info {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30rpx;
+}
+.init_info .info_line {
+  font-size: 100rpx;
+  line-height: 140rpx;
+  height: auto;
+}
+.init_info .info_ri {  
+  margin-left: 20rpx;
+  margin-top: 18rpx;
+}
+.init_info .info_ri .ri_top {
+  font-size: 28rpx;
+  line-height: 46rpx;
+  height: auto;
+  display: block; 
+}
+.init_info .info_ri .ri_bot {
+  font-size: 54rpx;
+  font-style: italic;
+}
+.top_txt .init_bot {
+  font-size: 24rpx;
+  padding-left: 2rpx;
+}
+/* 更新时间 */
+.all_tip {
+  position: relative;
+  color: #737373;
+  font-size: 28rpx;
+  text-align: left;
+  line-height: 28rpx;
+  height: auto;
+  margin: 40rpx 0;
+  width: 100%;
+}
+.all_tip .all_tip_ini {
+  padding: 0 40rpx 0 40rpx;
+  line-height: 20rpx;
+  height: 20rpx;
+  display: block;
+}
+.all_tip .all_bold {
+  color: #222;
+  font-weight: 500;
+}
+/* 更新数据 */
+.tip_dia {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+.tip_dia .tip_box {
+  position: relative;
+  width: 160rpx;
+  text-align: center;
+  margin-right: 8rpx;   
+}
+.tip_box .add_last {
+  font-size: 20rpx;
+  color: #7c7c7c;
+  font-weight: 500;
+  padding-top: 20rpx;
+  line-height: 28rpx;
+  display: inline-block;
+}
+.tip_box .num {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  font-size: 46rpx;
+}
+.tip_box .txt {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  color: #222;
+  font-size: 28rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-weight: 500;
+}
+.tip_box.dia {
+  background-color: #fdf1f1;
+  border-radius: 12rpx 0 0 12rpx;
+}
+.tip_box.dia .num,
+.tip_box.dia .add_last span {
+  color: #f55253;
+}
+.tip_box.dia .txt {
+  background-color: #ffe0e0; 
+  border-radius: 0 0 0 12rpx; 
+}
+.tip_box.sus {
+  background-color: #fff7ed;
+}
+.tip_box.sus .num,
+.tip_box.sus .add_last span {
+  color: #ff961e;
+}
+.tip_box.sus .txt {
+  background-color: #ffeed9;  
+}
+.tip_box.cur {
+  background-color: #f1f8f4;
+}
+.tip_box.cur .num,
+.tip_box.cur .add_last span {
+  color: #178b50;
+}
+.tip_box.cur .txt {
+  background-color: #dfeee6;  
+}
+.tip_box.death {
+  background-color: #f8f8f8;
+  border-radius: 0 12rpx 12rpx 0;
+}
+.tip_box.death .num,
+.tip_box.death .add_last span {
+  color: #66666c;
+}
+.tip_box.death .txt {
+  background-color: #eeeeee;  
+  border-radius: 0 0 12rpx 0;
+}
+/* 更新图形 */
+.chart_all {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.van_line {
+  position: relative;
+  width: 100%;
+  height: 500rpx;
+  margin: 60rpx 0 10rpx;
+}
+.van_line .tab_init {
+  background: #FFF;
+}
+.van_line swiper {
+  height: 500rpx;
+}
+#mychart-dom-bar {
+  position: relative;
+  border: 1rpx solid #e1e1e1;
+  width: 96%;
+  border-radius: 12rpx;
+  padding-top: 20rpx;
+  height: 450rpx;
+  background: #FFF;
+}
+#mychart-dom-bar-two {
+  position: relative;
+  border: 1rpx solid #e1e1e1;
+  width: 96%;
+  border-radius: 12rpx;
+  padding-top: 20rpx;
+  height: 450rpx;
+  background: #FFF;
+}
+#mychart-dom-map {
+  position: relative;
+  width: 100%;
+  padding-top: 20rpx;
+  height: 720rpx;
+}
+/* 切换轮播图按钮 */
+.btn_change_swiper {
+  
+}
+/* 各个省份患病数 */
+.pro_col {
+  position: relative;
+  width: 100%;
+  padding-top: 30rpx;
+}
+.pro_col .col_title {
+  font-size: 32rpx;
+  font-weight: 600;
+  padding-left: 28rpx;
+  line-height: 68rpx;
+}
+.pro_col .col_tip {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-size: 28rpx;
+  height: auto;
+  line-height: 58rpx;
+}
+.col_tip .tip_area {
+  padding-left: 28rpx;
+  color: #005dff;
+}
+.col_tip .tip_rig {
+  padding-right: 30rpx;
+}
+.pro_col .init_ar {
+
+}
+.pro_col .init_rig {
+  margin-right: 20rpx;
+}
+.pro_col .init_rig span {
+  padding-right: 18rpx;
+  width: 100rpx;
+  text-align: center;
+  display: inline-block;
+}
+.pro_col .init_rig span:nth-child(1) {
+  width: 120rpx;
+  color: #005dff;
+}
+.pro_col .van-collapse-item__content {
+  padding-top: 0;
+  padding-bottom: 10rpx;
+}
+.pro_col .item_ar {
+  width: 160rpx;
+  color: #005dff;
+}
+.pro_col .item_rig {
+  width: 350rpx;
+  display: inline-block; 
+}
+.pro_col .item_rig span{
+  width: 110rpx;
+  text-align: center;
+  display: inline-block;
+  color: #222222;
+  position: relative;
+  right: 12px;
+}
+.pro_col .item_rig span:nth-child(1){
+  position: absolute;
+  left: 330rpx;
+  color: #005dff;
+}
+.col_tip.child_txt {
+  color: #737373;
+  border-bottom: 2rpx solid #e9e9e9;
+  line-height: 76rpx;
+  font-weight: 500;
+}

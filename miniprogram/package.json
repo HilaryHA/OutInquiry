@@ -1,0 +1,16 @@
+{
+  "name": "miniprogram",
+  "version": "1.0.0",
+  "description": "This is online qutbreak quiry.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hilary",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.0.5",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  }
+}

@@ -1,0 +1,22 @@
+<view class="oi_self">
+  <block wx:for="{{ protectList }}" wx:key="*this">
+    <van-cell title="{{ item.cellTitle }}" icon="{{ item.cellIcon }}" value="{{ item.cellVal }}" />
+    <!-- <van-cell title="{{ item.cellTitle }}" icon="{{ item.cellIcon }}" value="{{ item.cellVal }}" label="{{ item.cellLable }}" /> -->
+    <view class="protect_swiper">
+      <swiper indicator-dots="{{ indicatorDots }}" autoplay="{{ autoplay }}" duration="{{ duration }}" indicator-color="{{ indicatorColor }}" indicator-active-color="{{ indicatorActiveColor }}" circular="{{ circular }}" previous-margin="{{ previousNextMargin }}" next-margin="{{ previousNextMargin }}" easing-function="{{ easingFunction }}">
+      <!-- wx:key="*this" 代表在for循环中的item自身，这种表示需要item本身就是一个唯一的字符串或者数字 -->
+        <block wx:for="{{item.picObj}}" wx:for-item="childItem" wx:key="*this">
+          <swiper-item class="swiper-item">
+            <view class="sp_it">
+              <van-button type="danger" size="mini">{{ item.btnTip }}</van-button>
+              <view class="it_img">
+                <image src="{{ childItem }}"></image>
+              </view>
+              <text>{{ item.cellLable }}</text>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/self/self"
+  ],
+  "window": {
+    "backgroundColor": "#FFFFFF",
+    "navigationBarBackgroundColor": "#005dff",
+    "navigationBarTitleText": "实时疫情",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#323232",
+    "selectedColor": "#005dff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/bar_home_2.png",
+        "selectedIconPath": "/images/bar_home_1.png"
+      },
+      {
+        "pagePath": "pages/self/self",
+        "text": "个人",
+        "iconPath": "/images/bar_self_2.png",
+        "selectedIconPath": "/images/bar_self_1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

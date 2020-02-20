@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "疫情防护",
+  "usingComponents": {
+    "van-row": "@vant/weapp/row",
+    "van-col": "@vant/weapp/col",
+    "van-cell": "@vant/weapp/cell",
+    "van-cell-group": "@vant/weapp/cell-group",
+    "van-button": "@vant/weapp/button",
+    "van-image": "@vant/weapp/image"
+  }
+}
